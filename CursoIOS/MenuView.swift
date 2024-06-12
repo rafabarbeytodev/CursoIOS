@@ -14,8 +14,8 @@ struct MenuView: View {
                 NavigationLink(destination: IMCView()){
                     Text("IMC Calculator")
                 }
-                Text("Aplicacion 2")
-                Text("Aplicacion 3")
+                Text("Aplicación 2")
+                Text("Aplicación 3")
                 Text("App 4")
                 Text("App 5")
             }
