@@ -15,7 +15,7 @@ struct MenuView: View {
                     Text("IMC Calculator")
                 }
                 Text("Aplicacion 2")
-                Text("App 3")
+                Text("Aplicacion 3")
                 Text("App 4")
                 Text("App 5")
             }
