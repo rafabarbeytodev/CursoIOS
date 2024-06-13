@@ -17,6 +17,7 @@
 		05582DE62C175BC400E2C6A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05582DE52C175BC400E2C6A4 /* Preview Assets.xcassets */; };
 		05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A280F12C1991E700AFCB60 /* IMCResult.swift */; };
 		05A45F002C1AFDA0005FD606 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05A45EFF2C1AFDA0005FD606 /* SDWebImageSwiftUI */; };
+		05A45F022C1B0D7D005FD606 /* SuperHeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		05582DE22C175BC400E2C6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05582DE52C175BC400E2C6A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05A280F12C1991E700AFCB60 /* IMCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResult.swift; sourceTree = "<group>"; };
+		05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */,
+				05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A45F022C1B0D7D005FD606 /* SuperHeroDetail.swift in Sources */,
 				05405A882C18B88B00AE6733 /* IMCView.swift in Sources */,
 				05582DE12C175BBC00E2C6A4 /* MainView.swift in Sources */,
 				05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */,
