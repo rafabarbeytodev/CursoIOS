@@ -34,7 +34,7 @@ class ApiNetwork{
         let intelligence:String
         let strength:String
         let speed: String
-        let durbility:String
+        let durability:String
         let power:String
         let combat:String
     }
