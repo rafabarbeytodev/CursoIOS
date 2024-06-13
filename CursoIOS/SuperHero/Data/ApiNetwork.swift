@@ -13,9 +13,13 @@ class ApiNetwork{
         let response:String
         let results:[SuperHero]
     }
-    struct SuperHero:Codable{
+    struct SuperHero:Codable, Identifiable{
         let id:String
         let name:String
+        let image:Image
+    }
+    struct Image:Codable{
+        let url:String
     }
     
     func getHeroesByQuery(query: String) async throws -> Wrapper{

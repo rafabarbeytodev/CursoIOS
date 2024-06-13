@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0530C36E2C19DF620011B066 /* SuperHeroSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */; };
+		0530C3702C1A1E8D0011B066 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */; };
 		05405A852C18B59000AE6733 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05405A842C18B59000AE6733 /* MenuView.swift */; };
 		05405A882C18B88B00AE6733 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05405A872C18B88B00AE6733 /* IMCView.swift */; };
 		05582DDF2C175BBC00E2C6A4 /* CursoIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05582DDE2C175BBC00E2C6A4 /* CursoIOSApp.swift */; };
@@ -14,9 +16,12 @@
 		05582DE32C175BC400E2C6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05582DE22C175BC400E2C6A4 /* Assets.xcassets */; };
 		05582DE62C175BC400E2C6A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05582DE52C175BC400E2C6A4 /* Preview Assets.xcassets */; };
 		05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A280F12C1991E700AFCB60 /* IMCResult.swift */; };
+		05A45F002C1AFDA0005FD606 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05A45EFF2C1AFDA0005FD606 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroSearcher.swift; sourceTree = "<group>"; };
+		0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
 		05405A842C18B59000AE6733 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		05405A872C18B88B00AE6733 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
 		05582DDB2C175BB900E2C6A4 /* CursoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,12 +37,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A45F002C1AFDA0005FD606 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0530C36C2C19DF3E0011B066 /* SuperHero */ = {
+			isa = PBXGroup;
+			children = (
+				05A45EF72C1AF5A5005FD606 /* Core */,
+				05A45EF82C1AF5B5005FD606 /* Data */,
+				05A45EF92C1AF5C2005FD606 /* Di */,
+				05A45EFA2C1AF5CD005FD606 /* Domain */,
+				05A45EFB2C1AF5DA005FD606 /* Ui */,
+			);
+			path = SuperHero;
+			sourceTree = "<group>";
+		};
 		05405A862C18B86C00AE6733 /* IMC */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +84,7 @@
 		05582DDD2C175BB900E2C6A4 /* CursoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				0530C36C2C19DF3E0011B066 /* SuperHero */,
 				05405A862C18B86C00AE6733 /* IMC */,
 				05582DDE2C175BBC00E2C6A4 /* CursoIOSApp.swift */,
 				05582DE02C175BBC00E2C6A4 /* MainView.swift */,
@@ -84,6 +103,59 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		05A45EF72C1AF5A5005FD606 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		05A45EF82C1AF5B5005FD606 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		05A45EF92C1AF5C2005FD606 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		05A45EFA2C1AF5CD005FD606 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		05A45EFB2C1AF5DA005FD606 /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				05A45EFD2C1AF601005FD606 /* Screens */,
+				05A45EFC2C1AF5F5005FD606 /* Data */,
+			);
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		05A45EFC2C1AF5F5005FD606 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		05A45EFD2C1AF601005FD606 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +172,9 @@
 			dependencies = (
 			);
 			name = CursoIOS;
+			packageProductDependencies = (
+				05A45EFF2C1AFDA0005FD606 /* SDWebImageSwiftUI */,
+			);
 			productName = CursoIOS;
 			productReference = 05582DDB2C175BB900E2C6A4 /* CursoIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +203,9 @@
 				Base,
 			);
 			mainGroup = 05582DD22C175BB900E2C6A4;
+			packageReferences = (
+				05A45EFE2C1AFDA0005FD606 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 05582DDC2C175BB900E2C6A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,7 +236,9 @@
 				05582DE12C175BBC00E2C6A4 /* MainView.swift in Sources */,
 				05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */,
 				05405A852C18B59000AE6733 /* MenuView.swift in Sources */,
+				0530C36E2C19DF620011B066 /* SuperHeroSearcher.swift in Sources */,
 				05582DDF2C175BBC00E2C6A4 /* CursoIOSApp.swift in Sources */,
+				0530C3702C1A1E8D0011B066 /* ApiNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05A45EFE2C1AFDA0005FD606 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05A45EFF2C1AFDA0005FD606 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05A45EFE2C1AFDA0005FD606 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05582DD32C175BB900E2C6A4 /* Project object */;
 }
