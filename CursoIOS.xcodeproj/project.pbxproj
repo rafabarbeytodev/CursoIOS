@@ -18,6 +18,9 @@
 		05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A280F12C1991E700AFCB60 /* IMCResult.swift */; };
 		05A45F002C1AFDA0005FD606 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 05A45EFF2C1AFDA0005FD606 /* SDWebImageSwiftUI */; };
 		05A45F022C1B0D7D005FD606 /* SuperHeroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */; };
+		05A739252C1B62E100930A88 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A739242C1B62E100930A88 /* LoginViewModel.swift */; };
+		05A7392A2C1B641300930A88 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A739292C1B641300930A88 /* ApiClient.swift */; };
+		05A7392C2C1B64D400930A88 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7392B2C1B64D400930A88 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		05582DE52C175BC400E2C6A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05A280F12C1991E700AFCB60 /* IMCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResult.swift; sourceTree = "<group>"; };
 		05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetail.swift; sourceTree = "<group>"; };
+		05A739242C1B62E100930A88 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		05A739292C1B641300930A88 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		05A7392B2C1B64D400930A88 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		05582DDD2C175BB900E2C6A4 /* CursoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				05A739232C1B614C00930A88 /* LoginScreen */,
 				0530C36C2C19DF3E0011B066 /* SuperHero */,
 				05405A862C18B86C00AE6733 /* IMC */,
 				05582DDE2C175BBC00E2C6A4 /* CursoIOSApp.swift */,
@@ -155,6 +162,40 @@
 			children = (
 				0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */,
 				05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		05A739232C1B614C00930A88 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				05A739272C1B631500930A88 /* Data */,
+				05A739262C1B62FD00930A88 /* Ui */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		05A739262C1B62FD00930A88 /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				05A739282C1B632A00930A88 /* Screens */,
+			);
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		05A739272C1B631500930A88 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				05A739292C1B641300930A88 /* ApiClient.swift */,
+				05A7392B2C1B64D400930A88 /* UserModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		05A739282C1B632A00930A88 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				05A739242C1B62E100930A88 /* LoginViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -243,6 +284,9 @@
 				0530C36E2C19DF620011B066 /* SuperHeroSearcher.swift in Sources */,
 				05582DDF2C175BBC00E2C6A4 /* CursoIOSApp.swift in Sources */,
 				0530C3702C1A1E8D0011B066 /* ApiNetwork.swift in Sources */,
+				05A739252C1B62E100930A88 /* LoginViewModel.swift in Sources */,
+				05A7392A2C1B641300930A88 /* ApiClient.swift in Sources */,
+				05A7392C2C1B64D400930A88 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
