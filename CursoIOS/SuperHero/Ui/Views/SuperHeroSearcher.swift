@@ -9,12 +9,15 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct SuperHeroSearcher: View {
+    
+    @Environment(SuperHeroesViewModel.self) var superHeroVM
     @State var superheroname: String = ""
-    @State var wrapper:ApiNetwork.Wrapper? = nil
-    @State var loading:Bool = false
+        
     var body: some View {
+        
         VStack{
-            TextField("", text: $superheroname, prompt: Text("SuperHero....").font(.title2).bold().foregroundColor(.gray))         .font(.title2)
+            TextField("", text: $superheroname, prompt: Text("SuperHero....").font(.title2).bold().foregroundColor(.gray))
+                .font(.title2)
                 .bold()
                 .foregroundColor(.white)
                 .padding(16)
@@ -22,28 +25,20 @@ struct SuperHeroSearcher: View {
                 .padding(8)
                 .autocorrectionDisabled()
                 .onSubmit {
-                    loading = true
-                    print(superheroname)
-                    Task{
-                        do{
-                            wrapper = try await ApiNetwork().getHeroesByQuery(query: superheroname)
-                        }
-                        catch{
-                            print("ERROR")
-                        }
-                        loading = false
-                    }
+                    superHeroVM.getHeroesByQuery(query: superheroname)
                 }
-            if loading{
+            if superHeroVM.loading{
                 ProgressView().tint(.white)
             }
             NavigationStack{
-                List(wrapper?.results ?? []){ superhero in
-                    ZStack{
-                        SuperHeroItem(superhero: superhero)
-                        NavigationLink(destination: SuperHeroDetail(id:superhero.id)){EmptyView()}.opacity(0)
-                    }.listRowBackground(Color.backgroundApp)
-                }.listStyle(.plain)
+                List{
+                    ForEach(superHeroVM.superHeroes.results){ superhero in
+                        ZStack{
+                            SuperHeroItem(superhero: superhero)
+                            NavigationLink(destination: SuperHeroDetail(id:superhero.id)){EmptyView()}.opacity(0)
+                        }.listRowBackground(Color.backgroundApp)
+                    }.listStyle(.plain)
+                }
             }
                 Spacer()
         }.frame(maxWidth:.infinity,maxHeight:.infinity).background(.backgroundApp)
@@ -51,7 +46,7 @@ struct SuperHeroSearcher: View {
 }
 
 struct SuperHeroItem: View {
-    let superhero: ApiNetwork.SuperHero
+    let superhero: SuperHeroesEntity.SuperHero
     var body: some View {
         ZStack{
             WebImage(url:URL(string: superhero.image.url))
@@ -73,6 +68,11 @@ struct SuperHeroItem: View {
     }
 }
 
-#Preview {
-    SuperHeroSearcher()
+struct SuperHeroSearcher_Previews: PreviewProvider {
+    static var previews: some View {
+        let useCase = MockGetHeroesByQueryUseCase()
+        let viewModel = SuperHeroesViewModel(getHeroesByQueryUseCase: useCase) // Aquí inicializas tu viewModel como lo hagas en tu aplicación
+        return SuperHeroSearcher()
+            .environment(viewModel)
+    }
 }

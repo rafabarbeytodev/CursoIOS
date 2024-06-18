@@ -10,47 +10,44 @@ import SDWebImageSwiftUI
 import Charts
 
 struct SuperHeroDetail: View {
+    
     let id:String
     
-    @State var superhero:ApiNetwork.SuperHeroDetail? = nil
-    @State var loading:Bool = true
+    @Environment(SuperHeroeDetailViewModel.self) var superHeroDetailVM
     
     var body: some View {
         VStack{
-            if loading{
+            if superHeroDetailVM.loading{
                 ProgressView().tint(.white)
-            }else if let superhero = superhero{
-                WebImage(url:URL(string: superhero.image.url))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxHeight: 250)
-                    .clipped()
-                Text(superhero.name).bold().font(.title).foregroundColor(.white)
-                ForEach(superhero.biography.aliases,id: \.self){ alias in
-                    Text(alias).foregroundColor(.gray).italic()
-                }
-                PowerSuperHeroStats(stats: superhero.powerstats)
-                Spacer()
             }else{
-                Text("ERROR EN LA OBTENCION DE DATOS").bold().font(.title).foregroundColor(.white)
+                let superhero = superHeroDetailVM.superHeroeDetail
+                if superhero.id != ""{
+                    WebImage(url:URL(string: superhero.image.url))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(maxHeight: 250)
+                        .clipped()
+                    Text(superhero.name).bold().font(.title).foregroundColor(.white)
+                    ForEach(superhero.biography.aliases,id: \.self){ alias in
+                        Text(alias).foregroundColor(.gray).italic()
+                    }
+                    PowerSuperHeroStats(stats: superhero.powerstats)
+                    Spacer()
+                    
+                }else{
+                    Text("ERROR EN LA OBTENCION DE DATOS").bold().font(.title).foregroundColor(.white)
+                }
             }
         }.frame(maxWidth: .infinity,maxHeight: .infinity)
             .background(.backgroundApp)
             .onAppear{
-                Task{
-                    do{
-                        superhero = try await ApiNetwork().getHeroeByID(id:id)
-                    }catch{
-                        superhero = nil
-                    }
-                    loading = false
-                }
+                superHeroDetailVM.getHeroeById(id: id)
             }
     }
 }
 
 struct PowerSuperHeroStats:View {
-    let stats:ApiNetwork.Powerstats
+    let stats:SuperHeroeDetailEntity.Powerstats
     var body: some View {
         VStack{
             Chart{
@@ -84,7 +81,14 @@ struct PowerSuperHeroStats:View {
     }
 }
 
-#Preview {
-    SuperHeroDetail(id:"204")
+struct SuperHeroDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        let useCaseDetail = MockGetHeroeByIDUseCase()
+        let viewModel = SuperHeroeDetailViewModel(getHeroeByIdUseCase: useCaseDetail) // Aquí inicializas tu viewModel como lo hagas en tu aplicación
+        return SuperHeroDetail(id: "130")
+            .environment(viewModel)
+    }
 }
+
+
 

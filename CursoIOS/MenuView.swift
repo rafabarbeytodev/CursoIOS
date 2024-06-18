@@ -17,8 +17,8 @@ struct MenuView: View {
                 NavigationLink(destination: SuperHeroSearcher()){
                     Text("SuperHero")
                 }
-                NavigationLink(destination: LoginScreen()){
-                    Text("LoginScreen")
+                NavigationLink(destination: LoginView()){
+                    Text("Login Screen Firebase")
                 }
                 Text("App 3")
                 Text("App 4")

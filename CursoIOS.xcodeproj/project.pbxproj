@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05060B682C203E3E00945868 /* GetHeroesByQueryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05060B672C203E3E00945868 /* GetHeroesByQueryUseCase.swift */; };
+		05060B6A2C203F1900945868 /* GetHeroeByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05060B692C203F1900945868 /* GetHeroeByIDUseCase.swift */; };
+		05060B6D2C20410600945868 /* SuperHeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05060B6C2C20410600945868 /* SuperHeroesViewModel.swift */; };
+		05060B6F2C2043D400945868 /* SuperHeroeDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05060B6E2C2043D400945868 /* SuperHeroeDetailEntity.swift */; };
+		05060B712C216D5300945868 /* SuperHeroeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05060B702C216D5300945868 /* SuperHeroeDetailViewModel.swift */; };
 		0530C36E2C19DF620011B066 /* SuperHeroSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */; };
-		0530C3702C1A1E8D0011B066 /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */; };
+		0530C3702C1A1E8D0011B066 /* SuperHeroesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0530C36F2C1A1E8D0011B066 /* SuperHeroesEntity.swift */; };
 		05405A852C18B59000AE6733 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05405A842C18B59000AE6733 /* MenuView.swift */; };
 		05405A882C18B88B00AE6733 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05405A872C18B88B00AE6733 /* IMCView.swift */; };
 		05582DDF2C175BBC00E2C6A4 /* CursoIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05582DDE2C175BBC00E2C6A4 /* CursoIOSApp.swift */; };
@@ -21,11 +26,17 @@
 		05A739252C1B62E100930A88 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A739242C1B62E100930A88 /* LoginViewModel.swift */; };
 		05A7392A2C1B641300930A88 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A739292C1B641300930A88 /* ApiClient.swift */; };
 		05A7392C2C1B64D400930A88 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7392B2C1B64D400930A88 /* UserModel.swift */; };
+		05A7392E2C1B7D6300930A88 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7392D2C1B7D6300930A88 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05060B672C203E3E00945868 /* GetHeroesByQueryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesByQueryUseCase.swift; sourceTree = "<group>"; };
+		05060B692C203F1900945868 /* GetHeroeByIDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroeByIDUseCase.swift; sourceTree = "<group>"; };
+		05060B6C2C20410600945868 /* SuperHeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesViewModel.swift; sourceTree = "<group>"; };
+		05060B6E2C2043D400945868 /* SuperHeroeDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroeDetailEntity.swift; sourceTree = "<group>"; };
+		05060B702C216D5300945868 /* SuperHeroeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroeDetailViewModel.swift; sourceTree = "<group>"; };
 		0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroSearcher.swift; sourceTree = "<group>"; };
-		0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
+		0530C36F2C1A1E8D0011B066 /* SuperHeroesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesEntity.swift; sourceTree = "<group>"; };
 		05405A842C18B59000AE6733 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		05405A872C18B88B00AE6733 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
 		05582DDB2C175BB900E2C6A4 /* CursoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +49,7 @@
 		05A739242C1B62E100930A88 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		05A739292C1B641300930A88 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		05A7392B2C1B64D400930A88 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		05A7392D2C1B7D6300930A88 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +64,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05060B6B2C2040E300945868 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				05060B6C2C20410600945868 /* SuperHeroesViewModel.swift */,
+				05060B702C216D5300945868 /* SuperHeroeDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		0530C36C2C19DF3E0011B066 /* SuperHero */ = {
 			isa = PBXGroup;
 			children = (
+				05060B6B2C2040E300945868 /* ViewModels */,
 				05A45EF72C1AF5A5005FD606 /* Core */,
 				05A45EF82C1AF5B5005FD606 /* Data */,
-				05A45EF92C1AF5C2005FD606 /* Di */,
 				05A45EFA2C1AF5CD005FD606 /* Domain */,
 				05A45EFB2C1AF5DA005FD606 /* Ui */,
 			);
@@ -92,7 +113,7 @@
 		05582DDD2C175BB900E2C6A4 /* CursoIOS */ = {
 			isa = PBXGroup;
 			children = (
-				05A739232C1B614C00930A88 /* LoginScreen */,
+				05A739232C1B614C00930A88 /* LoginScreenFirebase */,
 				0530C36C2C19DF3E0011B066 /* SuperHero */,
 				05405A862C18B86C00AE6733 /* IMC */,
 				05582DDE2C175BBC00E2C6A4 /* CursoIOSApp.swift */,
@@ -122,21 +143,17 @@
 		05A45EF82C1AF5B5005FD606 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0530C36F2C1A1E8D0011B066 /* ApiNetwork.swift */,
+				0530C36F2C1A1E8D0011B066 /* SuperHeroesEntity.swift */,
+				05060B6E2C2043D400945868 /* SuperHeroeDetailEntity.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		05A45EF92C1AF5C2005FD606 /* Di */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Di;
 			sourceTree = "<group>";
 		};
 		05A45EFA2C1AF5CD005FD606 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				05060B672C203E3E00945868 /* GetHeroesByQueryUseCase.swift */,
+				05060B692C203F1900945868 /* GetHeroeByIDUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -144,7 +161,7 @@
 		05A45EFB2C1AF5DA005FD606 /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				05A45EFD2C1AF601005FD606 /* Screens */,
+				05A45EFD2C1AF601005FD606 /* Views */,
 				05A45EFC2C1AF5F5005FD606 /* Data */,
 			);
 			path = Ui;
@@ -157,22 +174,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		05A45EFD2C1AF601005FD606 /* Screens */ = {
+		05A45EFD2C1AF601005FD606 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0530C36D2C19DF620011B066 /* SuperHeroSearcher.swift */,
 				05A45F012C1B0D7D005FD606 /* SuperHeroDetail.swift */,
 			);
-			path = Screens;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		05A739232C1B614C00930A88 /* LoginScreen */ = {
+		05A739232C1B614C00930A88 /* LoginScreenFirebase */ = {
 			isa = PBXGroup;
 			children = (
 				05A739272C1B631500930A88 /* Data */,
 				05A739262C1B62FD00930A88 /* Ui */,
 			);
-			path = LoginScreen;
+			path = LoginScreenFirebase;
 			sourceTree = "<group>";
 		};
 		05A739262C1B62FD00930A88 /* Ui */ = {
@@ -196,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				05A739242C1B62E100930A88 /* LoginViewModel.swift */,
+				05A7392D2C1B7D6300930A88 /* LoginView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -282,11 +300,17 @@
 				05A280F22C1991E700AFCB60 /* IMCResult.swift in Sources */,
 				05405A852C18B59000AE6733 /* MenuView.swift in Sources */,
 				0530C36E2C19DF620011B066 /* SuperHeroSearcher.swift in Sources */,
+				05A7392E2C1B7D6300930A88 /* LoginView.swift in Sources */,
 				05582DDF2C175BBC00E2C6A4 /* CursoIOSApp.swift in Sources */,
-				0530C3702C1A1E8D0011B066 /* ApiNetwork.swift in Sources */,
+				05060B6A2C203F1900945868 /* GetHeroeByIDUseCase.swift in Sources */,
+				05060B6F2C2043D400945868 /* SuperHeroeDetailEntity.swift in Sources */,
+				0530C3702C1A1E8D0011B066 /* SuperHeroesEntity.swift in Sources */,
+				05060B712C216D5300945868 /* SuperHeroeDetailViewModel.swift in Sources */,
 				05A739252C1B62E100930A88 /* LoginViewModel.swift in Sources */,
+				05060B6D2C20410600945868 /* SuperHeroesViewModel.swift in Sources */,
 				05A7392A2C1B641300930A88 /* ApiClient.swift in Sources */,
 				05A7392C2C1B64D400930A88 /* UserModel.swift in Sources */,
+				05060B682C203E3E00945868 /* GetHeroesByQueryUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
